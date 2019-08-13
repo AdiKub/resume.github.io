@@ -8,27 +8,27 @@ const Header = () => {
     return (
         <div className='header'>
             <div className='container'>
-                <div className='header-title'>
-                    <div className='header-title-logo'>
-                        <img
-                            className='header-title-logo__img'
-                            src={Logo}
-                            alt='logo'/>
+                <div className='header-wrapper'>
+                    <div className='header-title'>
+                        <div className='header-title-logo'>
+                            <img
+                                className='header-title-logo__img'
+                                src={Logo}
+                                alt='logo'/>
+                        </div>
+                        <h1 className='header-title__text'>
+                            ADILET KUBATBEK UULU
+                        </h1>
                     </div>
-                    <h1 className='header-title__text'>
-                        ADILET KUBATBEK UULU
-                    </h1>
+                        <ul className='header-navs'>
+                            {navs.map(nav =>
+                                <li
+                                    className='header-navs__link'
+                                    key={nav}>
+                                    {nav}
+                                </li> )}
+                        </ul>
                 </div>
-
-                    <ul className='header-navs'>
-                        {navs.map(nav =>
-                            <li
-                                className='header-navs__link'
-                                key={nav}>
-                                {nav}
-                            </li> )}
-                    </ul>
-
             </div>
         </div>
     )
