@@ -1,6 +1,8 @@
 @import '../../assets/styles/variables';
 
 
-.header {
-  color: $mainYellow;
+.general-info { 
+  display: flex;
+  width: 49%;
+  height: 400px;
 }

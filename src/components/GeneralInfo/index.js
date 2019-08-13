@@ -6,7 +6,9 @@ import './styles.scss'
 const GeneralInfo =()=>{
 
     return (
-        <div>
+        <div 
+            className='general-info'
+            style={{color: "white"}}>
             GeneralInfo
         </div>
     )

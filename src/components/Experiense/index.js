@@ -1,12 +1,14 @@
 import React from 'react'
+
+import ExperienceNavigator from '../ExperienceNavigator'
 import './styles.scss'
 
 
 const Experiense = () => {
 
     return (
-        <div>
-            Experiense
+        <div className='experiense'>
+            <ExperienceNavigator/>
         </div>
     )
 }

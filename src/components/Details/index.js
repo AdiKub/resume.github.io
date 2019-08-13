@@ -12,8 +12,8 @@ const Details = () => {
         <div className='details'>
             <div className='container'>
                 <div className='details-wrapper'>
-                    <Experiense/>
                     <GeneralInfo/>
+                    <Experiense/>
                 </div>
             </div>
         </div>
