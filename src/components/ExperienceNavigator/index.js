@@ -4,8 +4,9 @@ import './styles.scss'
 
 
 const ExperienceNavigator = () => {
-	const [chnumber, isOpenww] = useState(2)
-	console.log(chnumber)
+	const [buttonId, isSelect] = useState('first')
+	const dates = ['2012-2013', '2014-2015', '2016-2017', '2017-2018', '2018-']
+
 	return (
 		<div className='navigator'>
 			<span className='navigator-title__text'>
@@ -16,29 +17,28 @@ const ExperienceNavigator = () => {
 				</div>
 				<div className='navigator-wrapper'>
 
-					<div id='0' className='navigator-radio'>
+					<div id='first' className='navigator-radio'>
 						<div className='navigator-radio__back'>
 						</div>
 					</div>
-					{[1, 2, 3, 4, 5].map((elem, index) => (
-						<>
+					{dates.map((date) => (
+						<div key={date} className='navigator-wrapper navigator-wrapper_dinamic'>
 							<div className='navigator-radio__line'>
 							</div>
 							<div className='navigator-radio'>
-								<div onClick={(e) => isOpenww(e.target.id)} id={index + 1} className='navigator-radio__back'>
+								<div onClick={(e) => isSelect(e.target.id)} id={date} className='navigator-radio__back'>
 								</div>
-								{chnumber === elem + 1 &&
-									<div className='navigator-radio__front'>
-										<span className='navigator-radio__front__text'>
-											1920-1080
+								{buttonId === date && 
+								<div className='navigator-radio__front' >
+									<span className='navigator-radio__front__text'>
+										1920-1080
                     </span>
-										<div className='navigator-radio__front__point'>
-										</div>
-									</div>}
+									<div className='navigator-radio__front__point'>
+									</div>
+								</div>}
 							</div>
-						</>
+						</div>
 					))}
-
 				</div>
 				<div className='navigator__arrow__down'>
 				</div>
