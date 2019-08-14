@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 
 import './styles.scss'
+import experiense from  '../../data/experience.json'
 
 
 const ExperienceNavigator = () => {
 	const [buttonId, isSelect] = useState('first')
-	const dates = ['2012-2013', '2014-2015', '2016-2017', '2017-2018', '2018-']
+	const experienseList = experiense.experiense;
+	const dates = []
+  Object.keys(experienseList).map(key=> dates.push(experienseList[key].period))
 
 	return (
 		<div className='navigator'>
@@ -31,7 +34,7 @@ const ExperienceNavigator = () => {
 								{buttonId === date && 
 								<div className='navigator-radio__front' >
 									<span className='navigator-radio__front__text'>
-										1920-1080
+									  {date}
                     </span>
 									<div className='navigator-radio__front__point'>
 									</div>

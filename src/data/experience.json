@@ -1,16 +1,14 @@
 {
-  "experiense": [
-    {
+  "experiense": {
       "FREELANCE": {
         "id": "1",
         "images": "FREELANCE_img.png",
         "period": "2018 – Present",
         "place": "home :)",
         "responsibillity": ["3d visualization", "Interior designer", "Repair and maintenance of PCs and laptops"]
-      }
-    },
-    {
-      "FURNITURE DESIGNER": {
+      },
+
+      "FURNITURE_DESIGNER": {
         "id": "2",
         "images": "FURNITURE_img.png",
         "period": "10.2016- 01.2018",
@@ -20,10 +18,8 @@
           "Measure room for furniture",
           "Design case furniture",
           "Calculate cost of furniture"]
-      }
-    },
-    {
-      "MOTION DESIGNER AND VIDEO EDITOR": {
+      },
+      "MOTION_DESIGNER_AND_VIDEO_EDITOR": {
         "id": "3",
         "images": "EDITOR_img.png",
         "period": "05.2015-07.2016 ",
@@ -32,10 +28,8 @@
           "Video editing",
           "CG, VFX (graphics and 3D animation)"
         ]
-      }
-    },
-    {
-      "FURNITURE DESIGNER": {
+      },
+      "FURNITURE_DESIGNER_": {
         "id": "4",
         "images": "FURNITURE_img.png",
         "period": "05.2012- 06.2013",
@@ -45,10 +39,8 @@
           "Measure room for furniture",
           "Design case furniture",
           "Calculate cost of furniture"]
-      }
-    },
-    {
-      "GRAPHICS DESIGNER": {
+      },
+      "GRAPHICS_DESIGNER": {
         "id": "5",
         "images": "GRAPHICS_img.png",
         "period": "02.2011- 05.2011",
@@ -57,6 +49,5 @@
           "design for street advertising production"
         ]
       }
-    }
-  ]
+    } 
 }
