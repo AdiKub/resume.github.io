@@ -1,6 +1,8 @@
 import React from 'react'
 import './styles.scss'
 import generalInfo from '../../data/generalInfo'
+import user from '../../assets/images/me_img.png'
+import userBackground from '../../assets/images/me_background_img.png'
 
 
 
@@ -23,10 +25,11 @@ const GeneralInfo = () => {
 						<div className='general-info-wrapper_subtitle' key={key}>
 							<span className='general-info_skill_name'>
 								{key}
-							</span>
+							</span> 
+							<br/>
 							{generalInfoContents.TECHNICAL_SKILLS[key].map(key2 =>
 								<span key={key2}>
-									{key2}
+									{key2 + ', '}
 								</span>
 							)}
 						</div>
@@ -35,11 +38,9 @@ const GeneralInfo = () => {
 				<div className='general-info-wrapper'>
 					<h4 className='general-info-wrapper_title'>LANGUAGES</h4>
 					{generalInfoContents['LANGUAGES'].map(key =>
-
 						<span key={key} className='general-info_text'>
 							{key}
 						</span>
-
 					)}
 				</div>
 				<div className='general-info-wrapper'>
@@ -51,7 +52,19 @@ const GeneralInfo = () => {
 					)}
 				</div>
 			</div>
-			<div className='general-info-image'></div>
+			<div className='general-info-image'>
+			
+					<img  
+						className='general-info-image_user_background' 
+						src={userBackground} 
+						alt='user'></img>
+				
+					<img  
+						className='general-info-image_user_img' 
+						src={user} 
+						alt='user'></img>
+
+			</div>
 		</div>
 	)
 }

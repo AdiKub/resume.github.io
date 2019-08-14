@@ -7,6 +7,8 @@
   height: 550px;
   border-bottom: 1px solid $mainYellow;
   padding-bottom: 20px;
+  position: relative;
+ 
 
 
   &-content {
@@ -17,6 +19,7 @@
     width: 180px;
     display:flex;
     flex-direction: column;
+    z-index: 1;
   }
 
   &-wrapper {
@@ -26,8 +29,7 @@
     font-size: 12px;
 
     &_subtitle {
-      display: flex;
-      flex-direction: column;
+      margin-top: 10px;
     }
     &_title {
       color: $mainYellow;
@@ -37,5 +39,19 @@
   &_skill_name{
     font-weight: bold;
     margin-top: 10px;
+  }
+  &-image {
+    object-fit: cover;
+    
+    &_user_img{
+      position: absolute;
+      bottom: 0;
+    }
+    &_user_background {
+      z-index: 0;
+      bottom: 5px;
+      height: 600px;
+      position: absolute;
+    }
   }
 }
