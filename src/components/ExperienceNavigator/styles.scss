@@ -67,7 +67,10 @@
             border-radius: 50%;
            }
            &__text {
+               width: 80%;
                color: $mainYellow;
+               font-size: 12px;
+               font-weight: bold;
            }
         }
     }

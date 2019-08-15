@@ -7,7 +7,7 @@ import FREELANCE_img from '../../assets/images/FREELANCE_img.png'
 const ExperienseDisplay = () => {
     const experienseList = experiense.experiense;
     console.log(experienseList)
-
+		
     return (
         <div className='experiense-display'>
             <div className='experiense-display-content'>

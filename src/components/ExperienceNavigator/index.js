@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
 
 import './styles.scss'
-import experiense from  '../../data/experience.json'
+import experiense from '../../data/experience.json'
 
 
 const ExperienceNavigator = () => {
-	const [buttonId, isSelect] = useState('first')
+	const [buttonId, isSelect] = useState('future')
 	const experienseList = experiense.experiense;
 	const dates = []
-  Object.keys(experienseList).map(key => dates.push(experienseList[key].period))
+	Object.keys(experienseList).map(key => dates.push(experienseList[key].period))
+
+	const setNextDate =()=> {
+	 	dates.indexOf(buttonId) > 0 ?
+		isSelect(dates[dates.indexOf(buttonId)-1]) :
+		isSelect(dates[dates.length-1])
+	}
+	const setPrevDate =()=> {
+		dates.indexOf(buttonId) < dates.length-1 ?
+		 isSelect(dates[dates.indexOf(buttonId)+1]) :
+		 isSelect(dates[0])
+	 }
 
 	return (
 		<div className='navigator'>
@@ -16,34 +27,45 @@ const ExperienceNavigator = () => {
 				experience
 		</span>
 			<div className='navigator-buttons'>
-				<div className='navigator__arrow__up'>
+				<div onClick={()=> setNextDate()} className='navigator__arrow__up'>
 				</div>
 				<div className='navigator-wrapper'>
 
 					<div id='first' className='navigator-radio'>
-						<div className='navigator-radio__back'>
+						<div onClick={() => isSelect('future')} className='navigator-radio__back'>
 						</div>
+						{buttonId === 'future' &&
+							<div className='navigator-radio__front' >
+								<span className='navigator-radio__front__text'>
+									{'your company could be here'}
+								</span>
+								<div className='navigator-radio__front__point'>
+								</div>
+							</div>}
 					</div>
-					{dates.map((date) => (
+					{dates.map((date, index) => (
 						<div key={date} className='navigator-wrapper navigator-wrapper_dinamic'>
 							<div className='navigator-radio__line'>
 							</div>
 							<div className='navigator-radio'>
-								<div onClick={(e) => isSelect(e.target.id)} id={date} className='navigator-radio__back'>
+								<div
+									onClick={(e) => isSelect(e.target.id)}
+									id={date}
+									className='navigator-radio__back'>
 								</div>
-								{buttonId === date && 
-								<div className='navigator-radio__front' >
-									<span className='navigator-radio__front__text'>
-									  {date}
-									</span>
-									<div className='navigator-radio__front__point'>
-									</div>
-								</div>}
+								{buttonId === date &&
+									<div className='navigator-radio__front' >
+										<span className='navigator-radio__front__text'>
+											{date}
+										</span>
+										<div className='navigator-radio__front__point'>
+										</div>
+									</div>}
 							</div>
 						</div>
 					))}
 				</div>
-				<div className='navigator__arrow__down'>
+				<div onClick={()=> setPrevDate()} className='navigator__arrow__down'>
 				</div>
 			</div>
 			<span className='navigator-change_text'>
