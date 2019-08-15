@@ -1,0 +1,41 @@
+@import '../../assets/styles/variables';
+
+.experiense-display {
+    display: flex;
+    height: 100%;
+    width: 450px;
+    padding: 30px 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    &__position {
+        color: $mainYellow;
+        display: flex;
+        flex-direction: column;
+        text-transform: lowercase;
+
+        &__name { 
+            margin: 3px;
+            color: $lightFont;
+            text-transform: uppercase;
+        }
+    }
+
+    &-images {
+        width: 250px;
+        height: 200px;
+        
+        &__image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

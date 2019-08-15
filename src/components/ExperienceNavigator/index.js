@@ -8,13 +8,13 @@ const ExperienceNavigator = () => {
 	const [buttonId, isSelect] = useState('first')
 	const experienseList = experiense.experiense;
 	const dates = []
-  Object.keys(experienseList).map(key=> dates.push(experienseList[key].period))
+  Object.keys(experienseList).map(key => dates.push(experienseList[key].period))
 
 	return (
 		<div className='navigator'>
 			<span className='navigator-title__text'>
 				experience
-        </span>
+		</span>
 			<div className='navigator-buttons'>
 				<div className='navigator__arrow__up'>
 				</div>
@@ -35,7 +35,7 @@ const ExperienceNavigator = () => {
 								<div className='navigator-radio__front' >
 									<span className='navigator-radio__front__text'>
 									  {date}
-                    </span>
+									</span>
 									<div className='navigator-radio__front__point'>
 									</div>
 								</div>}
@@ -48,7 +48,7 @@ const ExperienceNavigator = () => {
 			</div>
 			<span className='navigator-change_text'>
 				show all
-        </span>
+		</span>
 		</div>
 	)
 }
