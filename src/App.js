@@ -1,4 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,11 +10,11 @@ import './assets/styles/main.scss'
 
 function App() {
   return (
-    <Fragment>
+    <Provider store={store}>
         <Header/>
         <Details/>
         <Footer/>
-    </Fragment>
+    </Provider>
   )
 }
 

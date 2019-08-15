@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux';
 
 import './styles.scss'
 import experiense from '../../data/experience.json'
@@ -6,20 +7,24 @@ import experiense from '../../data/experience.json'
 
 const ExperienceNavigator = () => {
 	const [buttonId, isSelect] = useState('future')
+	const dispatch = useDispatch();
 	const experienseList = experiense.experiense;
-	const dates = []
-	Object.keys(experienseList).map(key => dates.push(experienseList[key].period))
+	const positions = Object.keys(experienseList)
 
 	const setNextDate =()=> {
-	 	dates.indexOf(buttonId) > 0 ?
-		isSelect(dates[dates.indexOf(buttonId)-1]) :
-		isSelect(dates[dates.length-1])
+	 	positions.indexOf(buttonId) > 0 ?
+		isSelect(positions[positions.indexOf(buttonId)-1]) :
+		isSelect(positions[positions.length-1])
 	}
 	const setPrevDate =()=> {
-		dates.indexOf(buttonId) < dates.length-1 ?
-		 isSelect(dates[dates.indexOf(buttonId)+1]) :
-		 isSelect(dates[0])
+		positions.indexOf(buttonId) < positions.length-1 ?
+		 isSelect(positions[positions.indexOf(buttonId)+1]) :
+		 isSelect(positions[0])
 	 }
+
+	 useEffect(()=>{
+		dispatch({ type: 'CHANGE_EXPERIENSE', title: buttonId})
+	 })
 
 	return (
 		<div className='navigator'>
@@ -37,26 +42,26 @@ const ExperienceNavigator = () => {
 						{buttonId === 'future' &&
 							<div className='navigator-radio__front' >
 								<span className='navigator-radio__front__text'>
-									{'your company could be here'}
+									{buttonId}
 								</span>
 								<div className='navigator-radio__front__point'>
 								</div>
 							</div>}
 					</div>
-					{dates.map((date, index) => (
-						<div key={date} className='navigator-wrapper navigator-wrapper_dinamic'>
+					{positions.map((position) => (
+						<div key={position} className='navigator-wrapper navigator-wrapper_dinamic'>
 							<div className='navigator-radio__line'>
 							</div>
 							<div className='navigator-radio'>
 								<div
 									onClick={(e) => isSelect(e.target.id)}
-									id={date}
+									id={position}
 									className='navigator-radio__back'>
 								</div>
-								{buttonId === date &&
+								{buttonId === position &&
 									<div className='navigator-radio__front' >
 										<span className='navigator-radio__front__text'>
-											{date}
+											{experienseList[position].period}
 										</span>
 										<div className='navigator-radio__front__point'>
 										</div>
