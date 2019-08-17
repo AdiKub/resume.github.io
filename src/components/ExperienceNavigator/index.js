@@ -7,6 +7,7 @@ const ExperienceNavigator = (props) => {
 	const { experiense } = props
 	const experienseList = experiense.experiense;
 	const [buttonId, isSelect] = useState('future')
+	const [fullExperiense, isShow] = useState(false)
 	const dispatch = useDispatch();
 	const positions = Object.keys(experienseList)
 
@@ -22,6 +23,7 @@ const ExperienceNavigator = (props) => {
 	 }
 
 	 useEffect(()=>{
+		dispatch({ type: 'SHOW_ALL', title: fullExperiense})
 		dispatch({ type: 'CHANGE_EXPERIENSE', title: buttonId})
 	 })
 
@@ -79,7 +81,7 @@ const ExperienceNavigator = (props) => {
 					onClick={()=> setPrevDate()} 
 					className='navigator__arrow__down'></div>
 			</div>
-			<span className='navigator-change_text'>
+			<span onClick={()=>isShow(!fullExperiense)} className='navigator-change_text'>
 				show all
 		</span>
 		</div>

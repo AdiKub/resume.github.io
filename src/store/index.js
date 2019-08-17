@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 const INITIAL_STATE = {
-  show: 'hide',
+  show: false,
   setExperiense: 'future'
 }
 
@@ -10,7 +10,7 @@ const experienseSwither = (state=INITIAL_STATE, action) => {
     case 'CHANGE_EXPERIENSE': 
       return { ...state, setExperiense: action.title };
     case 'SHOW_ALL':
-        return { ...state, myList: action.title }
+        return { ...state, show: action.title }
     default: 
       return state; 
   }

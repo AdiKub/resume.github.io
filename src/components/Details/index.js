@@ -18,8 +18,8 @@ const Details = () => {
                     <GeneralInfo generalInfo={generalInfo} />
                     <Experiense experiense={experiensies}/>
                 </div>
-                <FullExperiense experiense={experiensies} />
             </div>
+            <FullExperiense experiense={experiensies} /> 
         </div>
     )
 }
