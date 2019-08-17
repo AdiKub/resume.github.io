@@ -2,9 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import './styles.scss'
-import experiense from  '../../data/experience.json'
 
-const ExperienseDisplay = () => {
+
+const ExperienseDisplay = (props) => {
+  const { experiense } = props
 	const selectedExperiense =  useSelector( state => state.setExperiense )
 		const experienseList = experiense.experiense;
 		const position = experienseList[selectedExperiense]

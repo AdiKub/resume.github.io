@@ -1,12 +1,14 @@
 import React from 'react'
+
 import './styles.scss'
-import generalInfo from '../../data/generalInfo'
+
 import user from '../../assets/images/me_img.png'
 import userBackground from '../../assets/images/me_background_img.png'
 
 
 
-const GeneralInfo = () => {
+const GeneralInfo = (props) => {
+	const { generalInfo } = props
 	const generalInfoContents = generalInfo.generalInfo
 	return (
 		<div className='general-info'>
@@ -53,12 +55,10 @@ const GeneralInfo = () => {
 				</div>
 			</div>
 			<div className='general-info-image'>
-			
 					<img  
 						className='general-info-image_user_background' 
 						src={userBackground} 
 						alt='user'></img>
-				
 					<img  
 						className='general-info-image_user_img' 
 						src={user} 

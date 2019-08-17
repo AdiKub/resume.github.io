@@ -5,12 +5,14 @@ import ExperienseDisplay from '../ExperienseDisplay'
 import './styles.scss'
 
 
-const Experiense = () => {
+
+const Experiense = (props) => {
+    const { experiense } = props;
 
     return (
         <div className='experiense'>
-            <ExperienseDisplay/>
-            <ExperienceNavigator/>
+            <ExperienseDisplay experiense={experiense} />
+            <ExperienceNavigator experiense={experiense} />
         </div>
     )
 }

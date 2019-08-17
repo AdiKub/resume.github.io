@@ -12,7 +12,8 @@ function App() {
   return (
     <Provider store={store}>
         <Header/>
-        <Details/>
+        <Details  />
+    
         <Footer/>
     </Provider>
   )
