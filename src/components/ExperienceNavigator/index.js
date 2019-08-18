@@ -82,7 +82,7 @@ const ExperienceNavigator = (props) => {
 					className='navigator__arrow__down'></div>
 			</div>
 			<span onClick={()=>isShow(!fullExperiense)} className='navigator-change_text'>
-				show all
+				{fullExperiense ?  'hide all' : 'show all'}
 		</span>
 		</div>
 	)
