@@ -1,8 +1,6 @@
 import React from 'react'
 
 import './styles.scss'
-import Logo from '../../assets/images/logo.svg'
-
 
 const Header = () => {
 	return (
@@ -13,35 +11,43 @@ const Header = () => {
 						<div className='header-title-logo'>
 							<img
 								className='header-title-logo__img'
-								src={Logo}
+								src={process.env.PUBLIC_URL + '/images/logo.svg'}
 								alt='logo' />
 						</div>
 						<h1 className='header-title__text'>
 							ADILET KUBATBEK UULU
-                        </h1>
+            </h1>
 					</div>
 					<ul className='header-navs'>
-						
-							<li >
-								<a className='header-navs__link' href={process.env.PUBLIC_URL + 'AdiletKub_CV_ENG.pdf'} download >
-							  	resume
-								</a>
-							</li>
-							<li >
-								<a className='header-navs__link' href='g' >
-								  about me
-								</a>
-							</li>
-							<li >
-								<a className='header-navs__link'  href='g'  >
+						<li >
+							<a 
+								className='header-navs__link' 
+								href={process.env.PUBLIC_URL + 'AdiletKub_CV_ENG.pdf'} 
+								download >
+								resume
+							</a>
+						</li>
+						<li >
+							<a 
+								className='header-navs__link' 
+								href='g' >
+								about me
+							</a>
+						</li>
+						<li >
+							<a 
+								className='header-navs__link' 
+								href='g'  >
 								contacts
-								</a>
-							</li>
-							<li >
-								<a className='header-navs__link' href='g' >
+							</a>
+						</li>
+						<li >
+							<a 
+								className='header-navs__link' 
+								href='g' >
 								works
-								</a>
-							</li>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>

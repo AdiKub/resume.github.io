@@ -5,43 +5,44 @@ import './styles.scss'
 
 const ExperienceNavigator = (props) => {
 	const { experiense } = props
-	const experienseList = experiense.experiense;
 	const [buttonId, isSelect] = useState('future')
 	const [fullExperiense, isShow] = useState(false)
 	const dispatch = useDispatch();
+	const experienseList = experiense.experiense;
 	const positions = Object.keys(experienseList)
 
-	const setNextDate =()=> {
-	 	positions.indexOf(buttonId) > 0 ?
-		isSelect(positions[positions.indexOf(buttonId)-1]) :
-		isSelect(positions[positions.length-1])
+	const setNextDate = () => {
+		positions.indexOf(buttonId) > 0 ?
+			isSelect(positions[positions.indexOf(buttonId) - 1]) :
+			isSelect(positions[positions.length - 1])
 	}
-	const setPrevDate =()=> {
-		positions.indexOf(buttonId) < positions.length-1 ?
-		 isSelect(positions[positions.indexOf(buttonId)+1]) :
-		 isSelect(positions[0])
-	 }
+	const setPrevDate = () => {
+		positions.indexOf(buttonId) < positions.length - 1 ?
+			isSelect(positions[positions.indexOf(buttonId) + 1]) :
+			isSelect(positions[0])
+	}
 
-	 useEffect(()=>{
-		dispatch({ type: 'SHOW_ALL', title: fullExperiense})
-		dispatch({ type: 'CHANGE_EXPERIENSE', title: buttonId})
-	 })
+	useEffect(() => {
+		dispatch({ type: 'SHOW_ALL', title: fullExperiense })
+		dispatch({ type: 'CHANGE_EXPERIENSE', title: buttonId })
+	})
 
 	return (
 		<div className='navigator'>
 			<span className='navigator-title__text'>
-				experience </span>
+				experience 
+			</span>
 			<div className='navigator-buttons'>
-				<div 
-					onClick={()=> setNextDate()} 
+				<div
+					onClick={() => setNextDate()}
 					className='navigator__arrow__up'>
 				</div>
 				<div className='navigator-wrapper'>
-					<div 
-						id='first' 
+					<div
+						id='first'
 						className='navigator-radio'>
-						<div 
-							onClick={() => isSelect('future')} 
+						<div
+							onClick={() => isSelect('future')}
 							className='navigator-radio__back'>
 						</div>
 						{buttonId === 'future' &&
@@ -49,16 +50,14 @@ const ExperienceNavigator = (props) => {
 								<span className='navigator-radio__front__text'>
 									{buttonId}
 								</span>
-								<div className='navigator-radio__front__point'> 
-								</div>
+								<div className='navigator-radio__front__point'>	</div>
 							</div>}
 					</div>
 					{positions.map((position) => (
-						<div 
-							key={position} 
+						<div
+							key={position}
 							className='navigator-wrapper navigator-wrapper_dinamic'>
-							<div className='navigator-radio__line'>
-							</div>
+							<div className='navigator-radio__line'>	</div>
 							<div className='navigator-radio'>
 								<div
 									onClick={(e) => isSelect(e.target.id)}
@@ -70,20 +69,20 @@ const ExperienceNavigator = (props) => {
 										<span className='navigator-radio__front__text'>
 											{experienseList[position].period}
 										</span>
-										<div className='navigator-radio__front__point'>
-										</div>
+										<div className='navigator-radio__front__point'>	</div>
 									</div>}
 							</div>
 						</div>
 					))}
 				</div>
-				<div 
-					onClick={()=> setPrevDate()} 
-					className='navigator__arrow__down'></div>
+				<div
+					onClick={() => setPrevDate()}
+					className='navigator__arrow__down'>
+				</div>
 			</div>
-			<span onClick={()=>isShow(!fullExperiense)} className='navigator-change_text'>
-				{fullExperiense ?  'hide all' : 'show all'}
-		</span>
+			<span onClick={() => isShow(!fullExperiense)} className='navigator-change_text'>
+				{fullExperiense ? 'hide all' : 'show all'}
+			</span>
 		</div>
 	)
 }
