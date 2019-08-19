@@ -29,32 +29,23 @@ const ExperienceNavigator = (props) => {
 
 	return (
 		<div className='navigator'>
-			<span className='navigator-title__text'>
-				experience 
-			</span>
+			<span className='navigator-title__text'>experience</span>
 			<div className='navigator-buttons'>
-				<div
-					onClick={() => setNextDate()}
-					className='navigator__arrow__up'>
-				</div>
+				<div onClick={() => setNextDate()} className='navigator__arrow__up'></div>
 				<div className='navigator-wrapper'>
-					<div
-						id='first'
-						className='navigator-radio'>
-						<div
+					<div id='first' className='navigator-radio'>
+						<div 
 							onClick={() => isSelect('future')}
 							className='navigator-radio__back'>
 						</div>
 						{buttonId === 'future' &&
 							<div className='navigator-radio__front' >
-								<span className='navigator-radio__front__text'>
-									{buttonId}
-								</span>
+								<span className='navigator-radio__front__text'>{buttonId}</span>
 								<div className='navigator-radio__front__point'>	</div>
 							</div>}
 					</div>
 					{positions.map((position) => (
-						<div
+						<div 
 							key={position}
 							className='navigator-wrapper navigator-wrapper_dinamic'>
 							<div className='navigator-radio__line'>	</div>
@@ -80,7 +71,9 @@ const ExperienceNavigator = (props) => {
 					className='navigator__arrow__down'>
 				</div>
 			</div>
-			<span onClick={() => isShow(!fullExperiense)} className='navigator-change_text'>
+			<span 
+				onClick={() => isShow(!fullExperiense)} 
+				className='navigator-change_text'>
 				{fullExperiense ? 'hide all' : 'show all'}
 			</span>
 		</div>

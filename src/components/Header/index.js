@@ -22,26 +22,25 @@ const Header = () => {
 						<li >
 							<a 
 								className='header-navs__link' 
-								href={process.env.PUBLIC_URL + 'AdiletKub_CV_ENG.pdf'} 
-								download >
+								href={process.env.PUBLIC_URL + 'AdiletKub_CV_ENG.pdf'} download >
 								resume
 							</a>
 						</li>
-						<li >
+						<li>
 							<a 
 								className='header-navs__link' 
 								href='g' >
 								about me
 							</a>
 						</li>
-						<li >
+						<li>
 							<a 
 								className='header-navs__link' 
 								href='g'  >
 								contacts
 							</a>
 						</li>
-						<li >
+						<li>
 							<a 
 								className='header-navs__link' 
 								href='g' >

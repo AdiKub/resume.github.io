@@ -11,10 +11,9 @@ import './assets/styles/main.scss'
 function App() {
   return (
     <Provider store={store}>
-        <Header/>
-        <Details  />
-    
-        <Footer/>
+      <Header />
+      <Details />
+      <Footer />
     </Provider>
   )
 }
