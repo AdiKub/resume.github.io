@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
 
 import Experiense from "../Experiense";
 import GeneralInfo from "../GeneralInfo";
 import FullExperiense from '../FullExperiense'
 import './styles.scss'
 
-import experiensies from '../../data/experience.json'
-import generalInfo from '../../data/generalInfo.json'
-
 const Details = () => {
+	const dispatch = useDispatch();
+	useEffect(()=>{
+		const fireDb = window.firebase.database();
+		fireDb.ref().on('value', (snapshot, err) => {
+			if (err) {console.log(err)} 
+			else { 
+				dispatch({ type: 'SET_RESUME', title: snapshot.val() }) 
+			}
+		})
+	});
 
 	return (
 		<div className='details'>
 			<div className='container'>
 				<div className='details-wrapper'>
-					<GeneralInfo generalInfo={generalInfo} />
-					<Experiense experiense={experiensies} />
+					<GeneralInfo />
+					<Experiense />
 				</div>
+			<FullExperiense />
 			</div>
-			<FullExperiense experiense={experiensies} />
 		</div>
 	)
 }

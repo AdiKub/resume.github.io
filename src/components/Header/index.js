@@ -12,10 +12,11 @@ const Header = () => {
 							<img
 								className='header-title-logo__img'
 								src={process.env.PUBLIC_URL + '/images/logo.svg'}
-								alt='logo' />
+								alt='logo' 
+							/>
 						</div>
 						<h1 className='header-title__text'>
-							ADILET KUBATBEK UULU
+							A K U
             </h1>
 					</div>
 					<ul className='header-navs'>

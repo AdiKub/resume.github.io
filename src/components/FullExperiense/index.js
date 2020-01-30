@@ -4,16 +4,12 @@ import { useSelector } from 'react-redux';
 import './styles.scss'
 
 const FullExperiense = (props) => {
-	const { experiense } = props
+	const experienseList = useSelector(state => state.resume["experiense"])
 	const doYouWantSeeAll = useSelector(state => state.show)
-
-	const experienseList = experiense.experiense
 	const experienseListArray = Object.keys(experienseList)
-
 	const isRevers = (index) => (
 		index % 2 === 0
 	)
-
 	return (
 		<>
 			{doYouWantSeeAll && experienseListArray.map((position, index) =>

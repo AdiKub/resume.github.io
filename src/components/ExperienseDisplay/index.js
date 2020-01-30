@@ -4,10 +4,9 @@ import { useSelector } from 'react-redux';
 import './styles.scss'
 
 
-const ExperienseDisplay = (props) => {
-  const { experiense } = props
+const ExperienseDisplay = () => {
+  const experienseList = useSelector(state => state.resume["experiense"])
   const selectedExperiense = useSelector(state => state.setExperiense)
-  const experienseList = experiense.experiense;
   const position = experienseList[selectedExperiense]
 
   if (position) {

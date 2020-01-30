@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import './styles.scss'
 
 const ExperienceNavigator = (props) => {
-	const { experiense } = props
+	const experienseList = useSelector(state => state.resume["experiense"])
 	const [buttonId, isSelect] = useState('future')
 	const [fullExperiense, isShow] = useState(false)
 	const dispatch = useDispatch();
-	const experienseList = experiense.experiense;
 	const positions = Object.keys(experienseList)
 
 	const setNextDate = () => {

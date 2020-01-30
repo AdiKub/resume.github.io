@@ -7,8 +7,8 @@ import Footer from './components/Footer';
 import Details from './components/Details';
 import './assets/styles/main.scss'
 
-
 function App() {
+  
   return (
     <Provider store={store}>
       <Header />

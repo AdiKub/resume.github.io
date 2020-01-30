@@ -1,10 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 import './styles.scss'
 
-const GeneralInfo = (props) => {
-	const { generalInfo } = props
-	const generalInfoContents = generalInfo.generalInfo
+const GeneralInfo = () => {
+	const generalInfoContents = useSelector(state => state.resume["generalInfo"])
 
 	return (
 		<div className='general-info'>
@@ -43,7 +43,7 @@ const GeneralInfo = (props) => {
 					)}
 				</div>
 			</div>
-			<div className='general-info-image'>
+			{/* <div className='general-info-image'>
 				<img
 					className='general-info-image_user_background'
 					src={process.env.PUBLIC_URL + '/images/me_background_img.png'}
@@ -52,7 +52,7 @@ const GeneralInfo = (props) => {
 					className='general-info-image_user_img'
 					src={process.env.PUBLIC_URL + '/images/me_img.png'}
 					alt='user'></img>
-			</div>
+			</div> */}
 		</div>
 	)
 }
