@@ -1,26 +1,21 @@
 @import '../../assets/styles/variables';
 
-
 .general-info { 
   display: flex;
   width: 49%;
-  height: 600px;
+  height: auto;
   border-bottom: 1px solid $mainYellow;
-  padding-bottom: 20px;
-  
+  border-top: 1px solid $mainYellow;
+    
   position: relative;
 
-
   &-content {
-    padding-top: 20px;
-    padding-left: 20px;
-    border-top: 1px solid $mainYellow;
+    margin: 60px 10px;
     justify-content: space-between;
     width: 180px;
     display:flex;
     flex-direction: column;
     z-index: 1;
-    
   }
 
   &-wrapper {
@@ -29,7 +24,6 @@
     flex-direction: column;
     font-size: 0.8em;
     
-
     &_subtitle {
       margin-top: 10px;
     }

@@ -4,10 +4,7 @@ const INITIAL_STATE = {
   show: false,
   setExperiense: 'future',
   resume: {
-    "experiense": {
-        "GRAPHICS DESIGNER": {
-          "responsibillity": []
-        }
+    "experiense": {  
       },
       "generalInfo": {
         "EDUCATION": {},

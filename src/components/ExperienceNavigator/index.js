@@ -4,11 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import './styles.scss'
 
 const ExperienceNavigator = (props) => {
-	const experienseList = useSelector(state => state.resume["experiense"])
+	const {experienseList} = props
+	const sortExp = Object.keys(experienseList)
+		.sort((a, b)=> experienseList[b].id - experienseList[a].id)
+	const show = useSelector(state => state.show)
 	const [buttonId, isSelect] = useState('future')
 	const [fullExperiense, isShow] = useState(false)
-	const dispatch = useDispatch();
-	const positions = Object.keys(experienseList)
+	const dispatch = useDispatch()
+	const positions = !show ? sortExp : []
 
 	const setNextDate = () => {
 		positions.indexOf(buttonId) > 0 ?
@@ -44,7 +47,7 @@ const ExperienceNavigator = (props) => {
 							</div>}
 					</div>
 					{positions.map((position) => (
-						<div 
+						<div
 							key={position}
 							className='navigator-wrapper navigator-wrapper_dinamic'>
 							<div className='navigator-radio__line'>	</div>
@@ -70,7 +73,7 @@ const ExperienceNavigator = (props) => {
 					className='navigator__arrow__down'>
 				</div>
 			</div>
-			<span 
+			<span
 				onClick={() => isShow(!fullExperiense)} 
 				className='navigator-change_text'>
 				{fullExperiense ? 'hide all' : 'show all'}

@@ -1,16 +1,17 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 import ExperienceNavigator from '../ExperienceNavigator'
 import ExperienseDisplay from '../ExperienseDisplay'
 import './styles.scss'
 
-const Experiense = (props) => {
-	const { experiense } = props;
+const Experiense = () => {
+	const experienseList = useSelector(state => state.resume["experiense"])
 
 	return (
 		<div className='experiense'>
-			<ExperienseDisplay experiense={experiense} />
-			<ExperienceNavigator experiense={experiense} />
+			<ExperienseDisplay experienseList={experienseList} />
+			<ExperienceNavigator experienseList={experienseList} />
 		</div>
 	)
 }

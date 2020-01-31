@@ -7,9 +7,9 @@ const FullExperiense = (props) => {
 	const experienseList = useSelector(state => state.resume["experiense"])
 	const doYouWantSeeAll = useSelector(state => state.show)
 	const experienseListArray = Object.keys(experienseList)
-	const isRevers = (index) => (
-		index % 2 === 0
-	)
+		.sort((a, b)=> experienseList[b].id - experienseList[a].id)
+	const isRevers = (index) => index % 2 === 0
+	
 	return (
 		<>
 			{doYouWantSeeAll && experienseListArray.map((position, index) =>

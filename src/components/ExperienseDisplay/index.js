@@ -4,12 +4,13 @@ import { useSelector } from 'react-redux';
 import './styles.scss'
 
 
-const ExperienseDisplay = () => {
-  const experienseList = useSelector(state => state.resume["experiense"])
+const ExperienseDisplay = (props) => {
+  const {experienseList} = props 
   const selectedExperiense = useSelector(state => state.setExperiense)
+  const show = useSelector(state => state.show)
   const position = experienseList[selectedExperiense]
 
-  if (position) {
+  if (!show && position) {
     return (
       <div className='experiense-display'>
         <div className='experiense-display-content'>
@@ -49,7 +50,9 @@ const ExperienseDisplay = () => {
       <div className='experiense-display'>
         <div className='experiense-display-content'>
           <p className='experiense-display__position' >
-             your company could be here
+            <strong>
+              your company could be here
+            </strong>
 					</p>
         </div>
       </div>

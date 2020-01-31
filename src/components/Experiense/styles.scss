@@ -3,9 +3,10 @@
 
 .experiense {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 49%;
-    height: 500px;
+    height: auto;
     border-top: 1px solid $mainYellow;
     border-bottom: 1px solid $mainYellow;
     padding: 20px 20px;
