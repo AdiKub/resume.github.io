@@ -19,16 +19,18 @@
   }
 
   &-wrapper {
+    margin-top: 10px;
     color: $lightFont;
     display: flex;
     flex-direction: column;
     font-size: 0.8em;
-    
-    &_subtitle {
-      margin-top: 10px;
-    }
+
     &_title {
       color: $mainYellow;
+    }
+    
+    &_subtitle {
+      margin-top: 3px;
     }
   }
 

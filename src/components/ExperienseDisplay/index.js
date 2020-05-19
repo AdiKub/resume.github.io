@@ -27,7 +27,7 @@ const ExperienseDisplay = (props) => {
             </span>
           </p>
           <p className='experiense-display__position' >
-            responsibillity:
+          functions:
               {position.responsibillity.map(key =>
               <span 
                 key={key} 
@@ -59,6 +59,5 @@ const ExperienseDisplay = (props) => {
     )
   }
 }
-// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/
-// sssssssssssssssssffffffffffffffffffff
+
 export default ExperienseDisplay;

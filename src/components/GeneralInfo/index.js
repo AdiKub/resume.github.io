@@ -25,7 +25,7 @@ const GeneralInfo = () => {
 								<span className='general-info_skill_name'> {key} </span>
 								<br/>
 								{generalInfoContents.TECHNICAL_SKILLS[key].map(key2 =>
-									<span key={key2}> {key2 + ', '}</span>
+									<span key={key2}> {key2 + '  '}</span>
 								)}
 							</div> 
 					)}

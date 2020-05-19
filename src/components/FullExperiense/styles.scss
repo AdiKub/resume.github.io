@@ -30,18 +30,7 @@
     letter-spacing: 2px;
     font-size: 1.3em;
 
-    &_right {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      position: absolute;
-      width: 100%;
-      height: 60px;
-      background-color: $mainYellow;
-      font-weight: bold;
-      font-family: 'Oswald';
-      letter-spacing: 2px;
-      font-size: 1.3em;
+    &_revers {
       justify-content: flex-start;
     }
    }
@@ -98,10 +87,6 @@
 
   }
    
-}
-
-.experiense-strip_revers {
-   justify-content: flex-start;
 }
 
 .full-experiense-content-box_revers {

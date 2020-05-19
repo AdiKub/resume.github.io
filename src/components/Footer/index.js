@@ -1,18 +1,21 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 import './styles.scss'
 
 const Footer = () => {
-	const navs = ['adiletkub@gmail.com', '(+996) 550 054450', 'github.com/AdiKub']
+	const contacts = useSelector(state => state.resume['generalInfo'].CONTACTS)
+
 	return (
 		<div className='footer'>
 			<div className='container'>
 				<div className='footer-wrapper'>
 					<ul className='footer-contacts'>
-						{navs.map(nav =>
+						{Object.keys(contacts).map(contact =>
 							<li
 								className='footer-contacts__info'
-								key={nav}>
-								{nav}
+								key={contact}>
+								{contacts[contact]}
 							</li>)}
 					</ul>
 				</div>

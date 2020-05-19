@@ -4,13 +4,18 @@ const INITIAL_STATE = {
   show: false,
   setExperiense: 'future',
   resume: {
-    "experiense": {  
+    'experiense': {  
       },
-      "generalInfo": {
-        "EDUCATION": {},
-        "TECHNICAL_SKILLS": {},
-        "LANGUAGES": [],
-        "ADDITIONAL_EDUCATION": {}
+      'generalInfo': {
+        'EDUCATION': {},
+        'TECHNICAL_SKILLS': {},
+        'LANGUAGES': [],
+        'ADDITIONAL_EDUCATION': {},
+        'CONTACTS': {
+          'email': "adiletkub@gmail.com",
+          'github': "github.com/AdiKub",
+          'phone_number': "+996 550 054450"
+        }
       }
   }
 }

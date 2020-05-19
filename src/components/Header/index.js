@@ -16,7 +16,7 @@ const Header = () => {
 							/>
 						</div>
 						<h1 className='header-title__text'>
-							A K U
+							ADILET Kubatbek Uulu
             </h1>
 					</div>
 					<ul className='header-navs'>
