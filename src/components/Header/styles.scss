@@ -18,7 +18,7 @@
   
   &-title {
     display: flex;
-    width: 650px;
+    width: auto;
     align-items: center;
 
     &__text {
@@ -47,15 +47,25 @@
 
   &-navs {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 400px;
+
     &__link {
       color: $darkFont;
-      margin-left: 50px;
       font-weight: bold;
       font-size: 0.8em;
 
       &:hover {
        cursor: pointer;
+      }
+
+      &_resume {
+        padding: 5px 15px;
+        border-radius: 5px;
+        //color: $mainYellow;
+        //background-color: $gradiemtEnd;
+        border: solid 2px $gradiemtEnd;
       }
     }
   }

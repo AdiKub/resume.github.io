@@ -18,13 +18,13 @@
         color: $mainYellow;
         display: flex;
         flex-direction: column;
-        text-transform: lowercase;
         font-size: 12px;
-        margin: 10px 0;
+				margin: 10px 0;
+				text-transform: uppercase;
         
         &__name { 
-            color: $lightFont;
-            text-transform: uppercase;
+					color: $lightFont;
+					text-transform: lowercase;
         }
     }
 

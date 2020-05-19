@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import Experiense from "../Experiense";
 import GeneralInfo from "../GeneralInfo";
 import FullExperiense from '../FullExperiense'
-import './styles.scss'
 
 const Details = () => {
 	const dispatch = useDispatch();
