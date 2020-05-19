@@ -1,6 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { Provider } from 'react-redux';
+import store from './store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {AppRouter} from './router.js';
+import './assets/styles/main.scss'
+
+const reanderApp = () => (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+);
+
+ReactDOM.render(reanderApp(), document.getElementById('root'));
 
