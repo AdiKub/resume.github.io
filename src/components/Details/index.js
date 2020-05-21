@@ -24,8 +24,8 @@ const Details = () => {
 					<GeneralInfo />
 					<Experiense />
 				</div>
-			<FullExperiense />
 			</div>
+			<FullExperiense />
 		</div>
 	)
 }

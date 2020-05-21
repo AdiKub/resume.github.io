@@ -7,12 +7,17 @@
   display: flex;
   justify-content: center;
   height: 400px;
+  align-items: center;
   position: relative;
+
+  .container {
+    align-items: center;
+  }
    
   &-wrapper {
     display: flex;
     justify-content: flex-end;
-    width: 950px;
+    width: 80%;
     height: 100%;
   }
 
@@ -21,8 +26,9 @@
     align-items: center;
     justify-content: flex-end;
     padding: 20px;
+    box-sizing: border-box;
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 60px;
     background-color: $mainYellow;
     font-weight: bold;
@@ -43,6 +49,10 @@
       padding: 30px 0;
       height: 340px;
       width: 730px;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
      &-box {
        height: 100%;
        width: 100%;
@@ -90,7 +100,7 @@
 }
 
 .full-experiense-content-box_revers {
-   flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .full-experiense-content-display_revers {
    text-align: end;

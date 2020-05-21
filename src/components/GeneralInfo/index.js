@@ -46,12 +46,16 @@ const GeneralInfo = () => {
 			<div className='general-info-image'>
 				<img
 					className='general-info-image_user_background'
-					src={process.env.PUBLIC_URL + '/images/me_background_img.png'}
-					alt='user'></img>
-				<img
+					src={process.env.PUBLIC_URL + '/images/me_background.png'}
+					alt='user'
+				>
+				</img>
+				{/* <img
 					className='general-info-image_user_img'
-					src={process.env.PUBLIC_URL + '/images/me_img.png'}
-					alt='user'></img>
+					src={process.env.PUBLIC_URL + '/images/me.png'}
+					alt='user'
+					>
+					</img> */}
 			</div>
 		</div>
 	)

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 import './styles.scss'
 
@@ -8,7 +7,6 @@ const Header = () => {
 		<div className='header'>
 			<div className='container'>
 				<div className='header-wrapper'>
-					<Link to='/'>
 					<div className='header-title'>
 						<div className='header-title-logo'>
 							<img
@@ -21,36 +19,34 @@ const Header = () => {
 							ADILET Kubatbek Uulu
             </h1>
 					</div>
-					</Link>
 					<ul className='header-navs'>
-						<li >
+						<li className='header-navs_download_box'>
+							<div className='header-navs_download'>
+								<div className='header-navs_download_arr'>
+
+								</div>
+							</div>
 							<a
 								className='header-navs__link header-navs__link_resume' 
 								href={process.env.PUBLIC_URL + 'AdiletKub_CV_ENG.pdf'} download >
-								download the resume
+								resume
 							</a>
 						</li>
-						<Link to='/about-me'>
 							<li>
-								<span className='header-navs__link' >
+								<a href='/' className='header-navs__link' >
 									about me
-								</span>
+								</a>
 							</li>
-						</Link>
-						<Link to='/contacts'>
 							<li>
-								<span className='header-navs__link' >
+								<a href='/'className='header-navs__link' >
 									contacts
-								</span>
+								</a>
 							</li>
-						</Link>
-						<Link to='/about-me'>
 							<li>
-								<span className='header-navs__link' >
+								<a href='/' className='header-navs__link' >
 									works
-								</span>
+								</a>
 							</li>
-						</Link>
 					</ul>
 				</div>
 			</div>

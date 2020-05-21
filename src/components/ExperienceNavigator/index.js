@@ -8,8 +8,8 @@ const ExperienceNavigator = (props) => {
 	const sortExp = Object.keys(experienseList)
 		.sort((a, b)=> experienseList[b].id - experienseList[a].id)
 	const show = useSelector(state => state.show)
-	const [buttonId, isSelect] = useState('FRONTEND-DEV')
 	const [fullExperiense, isShow] = useState(false)
+	const [buttonId, isSelect] = useState('FRONTEND-DEV')
 	const dispatch = useDispatch()
 	const positions = !show ? sortExp : []
 
@@ -23,7 +23,11 @@ const ExperienceNavigator = (props) => {
 			isSelect(positions[positions.indexOf(buttonId) + 1]) :
 			isSelect(positions[0])
 	}
-
+	const setFullExperiense = ()=>{
+		isShow(!fullExperiense)
+		isSelect( !fullExperiense ? 'future' : 'FRONTEND-DEV')
+	}
+	
 	useEffect(() => {
 		dispatch({ type: 'SHOW_ALL', title: fullExperiense })
 		dispatch({ type: 'CHANGE_EXPERIENSE', title: buttonId })
@@ -33,7 +37,12 @@ const ExperienceNavigator = (props) => {
 		<div className='navigator'>
 			<span className='navigator-title__text'>experience</span>
 			<div className='navigator-buttons'>
-				<div onClick={() => setNextDate()} className='navigator__arrow__up'></div>
+				<button
+					disabled={fullExperiense}
+					onClick={() => setNextDate()} 
+					className='navigator__arrow__up'
+				>
+				</button>
 				<div className='navigator-wrapper'>
 					<div id='first' className='navigator-radio'>
 						<div 
@@ -52,11 +61,11 @@ const ExperienceNavigator = (props) => {
 							className='navigator-wrapper navigator-wrapper_dinamic'>
 							<div className='navigator-radio__line'>	</div>
 							<div className='navigator-radio'>
-								<div
+								<button
 									onClick={(e) => isSelect(e.target.id)}
 									id={position}
 									className='navigator-radio__back'>
-								</div>
+								</button>
 								{buttonId === position &&
 									<div className='navigator-radio__front' >
 										<span className='navigator-radio__front__text'>
@@ -68,16 +77,18 @@ const ExperienceNavigator = (props) => {
 						</div>
 					))}
 				</div>
-				<div
+				<button
+					disabled={fullExperiense}
 					onClick={() => setPrevDate()}
-					className='navigator__arrow__down'>
-				</div>
+					className='navigator__arrow__down'
+				>
+				</button>
 			</div>
-			<span
-				onClick={() => isShow(!fullExperiense)} 
+			<button
+				onClick={() => setFullExperiense()} 
 				className='navigator-change_text'>
 				{fullExperiense ? 'hide all' : 'show all'}
-			</span>
+			</button>
 		</div>
 	)
 }

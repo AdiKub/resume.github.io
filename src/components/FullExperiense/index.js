@@ -43,7 +43,7 @@ const FullExperiense = (props) => {
 											</span>
 										</p>
 										<p className='full-experiense-content-display__position' >
-											responsibillity:
+										functions:
 											{experienseList[position].responsibillity.map(key =>
 												<span
 													key={key}
@@ -56,7 +56,7 @@ const FullExperiense = (props) => {
 									<div className='full-experiense-content-display-images'>
 										<img
 											className='full-experiense-content-display-images__image'
-											src={process.env.PUBLIC_URL + 'images/' + experienseList[position].images}
+											src={process.env.PUBLIC_URL + '/images/' + experienseList[position].images}
 											alt={position.images} />
 									</div>
 								</div>

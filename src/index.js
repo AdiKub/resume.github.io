@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import * as serviceWorker from './serviceWorker';
-import {AppRouter} from './router.js';
+import Details from './components/Details'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import './assets/styles/main.scss'
 
 const reanderApp = () => (
   <Provider store={store}>
-    <AppRouter />
+    <Header />
+    <Details />
+    <Footer />
   </Provider>
 );
 

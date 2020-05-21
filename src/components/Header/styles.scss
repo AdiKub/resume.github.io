@@ -14,6 +14,12 @@
     width: 100%;
     justify-content: space-between;
     height: 50px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 991px) {
+      height: 120px;
+      padding: 20px 0;
+		}
   }
   
   &-title {
@@ -29,6 +35,14 @@
       font-family: 'Oswald';
       text-transform: uppercase;
       letter-spacing: 3px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 1.5em;
+      }
+
+      @media screen and (max-width: 576px) {
+        margin-left: 20px;
+      }
     }
 
     &-logo {
@@ -51,6 +65,49 @@
     align-items: center;
     width: 400px;
 
+    &_download {
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      position: relative;
+      &_box {
+        width: 95px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border-radius: 5px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 991px) {
+          width: 75px;
+          padding: 5px;
+        }
+      }
+      &_arr {
+        position: absolute;
+        transform: rotate(45deg);
+        width: 10px;
+        height: 2px;
+        left: -1px;
+        background: black;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      width: 300px;
+      font-size: 0.9em;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    @media screen and (max-width: 767px) {
+    }
+
     &__link {
       color: $darkFont;
       font-weight: bold;
@@ -61,11 +118,7 @@
       }
 
       &_resume {
-        padding: 5px 15px;
-        border-radius: 5px;
-        //color: $mainYellow;
-        //background-color: $gradiemtEnd;
-        border: solid 2px $gradiemtEnd;
+        
       }
     }
   }

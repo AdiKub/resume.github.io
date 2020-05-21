@@ -40,7 +40,7 @@ const ExperienseDisplay = (props) => {
         <div className='experiense-display-images'>
           <img
             className='experiense-display-images__image'
-            src={process.env.PUBLIC_URL + 'images/' + position.images}
+            src={process.env.PUBLIC_URL + '/images/' + position.images}
             alt={position.images} />
         </div>
       </div>

@@ -13,17 +13,37 @@
     align-items: center;
     width: 100%;
     justify-content: flex-end;
+
+    @media screen and (max-width: 991px) {
+      height: 100px;
+		}
   }
 
   &-contacts {
     display: flex;
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
 
     &__info {
       color: $darkFont;
       margin-left: 50px;
       font-weight: bold;
       font-size: 0.8em;
+      @media screen and (max-width: 767px) {
+        margin-left: 25px;
+      }
+      @media screen and (max-width: 576px) {
+        margin-left: 0px;
+        margin-bottom: 10px;
+      }
     }
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
 }
