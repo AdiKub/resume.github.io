@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e6f705c6116d927255cd5fdef7b83b24",
+    "revision": "5e5df8d96cb1ce7a8caef7038288401d",
     "url": "/adiletkub.com/index.html"
   },
   {
-    "revision": "c0fb6ea13045a57d7370",
+    "revision": "28f6033ca91909c1c8ad",
     "url": "/adiletkub.com/static/css/main.3162a375.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adiletkub.com/static/js/2.aa2755f2.chunk.js"
   },
   {
-    "revision": "c0fb6ea13045a57d7370",
-    "url": "/adiletkub.com/static/js/main.79c74c43.chunk.js"
+    "revision": "28f6033ca91909c1c8ad",
+    "url": "/adiletkub.com/static/js/main.20e9d89f.chunk.js"
   },
   {
     "revision": "6e6e3b75c8154ad22e72",
