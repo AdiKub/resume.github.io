@@ -1,1 +1,1 @@
-https://adikub.github.io/resume.github.io/
+https://adikub.github.io/adiletkub.com
