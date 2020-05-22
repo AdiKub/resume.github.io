@@ -17,7 +17,7 @@ const FullExperiense = (props) => {
 					<div className='container'>
 						<div className={isRevers(index) ?
 							'full-experiense-wrapper' :
-							'full-experiense-wrapper full-experiense-strip_revers'}>
+							'full-experiense-wrapper full-experiense-wrapper_revers'}>
 							<div className={isRevers(index) ?
 								'full-experiense-strip' :
 								'full-experiense-strip full-experiense-strip_revers'} >

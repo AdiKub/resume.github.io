@@ -8,16 +8,17 @@
   justify-content: center;
   height: 400px;
   align-items: center;
-  position: relative;
-
+  
   .container {
     align-items: center;
   }
-   
+  
   &-wrapper {
+    position: relative;
     display: flex;
-    justify-content: flex-end;
-    width: 80%;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
     height: 100%;
   }
 
@@ -25,10 +26,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 20px;
     box-sizing: border-box;
-    position: absolute;
-    width: 90%;
+    padding: 20px 30px;
+    width: 100%;
     height: 60px;
     background-color: $mainYellow;
     font-weight: bold;
@@ -43,7 +43,6 @@
 
 
     &-content {
-    margin-top: 60px;
       display: flex;
       align-items: center;
       padding: 30px 0;
@@ -53,6 +52,7 @@
       @media screen and (max-width: 991px) {
         width: 100%;
       }
+
      &-box {
        height: 100%;
        width: 100%;
@@ -68,6 +68,7 @@
          flex-direction: column;
          height: 80%;
          justify-content: space-around;
+
         &__position {
           color: $mainYellow;
           display: flex;
@@ -99,9 +100,22 @@
    
 }
 
+.full-experiense-wrapper_revers {
+  align-items: flex-start;
+}
+
 .full-experiense-content-box_revers {
   flex-direction: row-reverse;
 }
 .full-experiense-content-display_revers {
    text-align: end;
+}
+
+@media screen and (max-width: 575px) {
+  .full-experiense-strip {
+    padding: 20px;
+  }
+  .full-experiense-content-box {
+    padding: 0 20px;
+  }
 }

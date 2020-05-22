@@ -1,8 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 import './styles.scss'
 
 const Header = () => {
+	const generalInfoContents = useSelector(state => state.resume["generalInfo"])
+
 	return (
 		<div className='header'>
 			<div className='container'>
@@ -16,7 +19,7 @@ const Header = () => {
 							/>
 						</div>
 						<h1 className='header-title__text'>
-							ADILET Kubatbek Uulu
+							{`${generalInfoContents.PERSON['first_name']} ${generalInfoContents.PERSON['last_name']}`}
             </h1>
 					</div>
 					<ul className='header-navs'>
@@ -32,7 +35,7 @@ const Header = () => {
 								resume
 							</a>
 						</li>
-							<li>
+							{/* <li>
 								<a href='/' className='header-navs__link' >
 									about me
 								</a>
@@ -46,7 +49,7 @@ const Header = () => {
 								<a href='/' className='header-navs__link' >
 									works
 								</a>
-							</li>
+							</li> */}
 					</ul>
 				</div>
 			</div>

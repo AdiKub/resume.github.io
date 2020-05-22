@@ -35,7 +35,7 @@
         align-items: center;
         justify-content: flex-end;
         position: relative;
-        margin: 10px 0;
+        margin: 15px 0;
 
         &__line {  
             width: 2px;
@@ -44,8 +44,8 @@
         }
 
         &__back {
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
             border: 2px solid $mainYellow;
             border-radius: 50%;
             &:hover {
@@ -61,8 +61,8 @@
             right: 4px;
 
            &__point {
-            width: 7px;
-            height: 7px;
+            width: 12px;
+            height: 12px;
             background-color: $mainYellow;
             border-radius: 50%;
            }
@@ -81,8 +81,8 @@
 
     &__arrow {
         &__up {
-            width: 13px;
-            height: 13px;
+            width: 18px;
+            height: 18px;
             border-top: 2px solid $mainYellow;
             border-right: 2px solid $mainYellow;
             transform: rotate(-45deg);
@@ -92,8 +92,8 @@
             
         }
         &__down {
-            width: 13px;
-            height: 13px;
+            width: 18px;
+            height: 18px;
             border-bottom: 2px solid $mainYellow;
             border-left: 2px solid $mainYellow;
             transform: rotate(-45deg);

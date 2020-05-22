@@ -7,6 +7,10 @@ const INITIAL_STATE = {
     'experiense': {  
       },
       'generalInfo': {
+        'PERSON': {
+          'first_name': '',
+          'last_name': ''
+        },
         'EDUCATION': {},
         'TECHNICAL_SKILLS': {},
         'LANGUAGES': [],
