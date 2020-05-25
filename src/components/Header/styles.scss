@@ -13,23 +13,19 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    height: 50px;
     box-sizing: border-box;
+    padding: 20px 0;
 
-    @media screen and (max-width: 991px) {
-      height: 120px;
-      padding: 20px 0;
-		}
   }
   
   &-title {
     display: flex;
     width: auto;
-    align-items: center;
+    //align-items: center;
 
     &__text {
       color: $darkFont;
-      margin-left: 80px;
+      //margin-left: 80px;
       font-weight: 900;
       font-size: 2.2em;
       font-family: 'Oswald';
@@ -75,18 +71,14 @@
       align-items: center;
       position: relative;
       &_box {
-        width: 95px;
+        width: 105px;
         border: 2px solid black;
         box-sizing: border-box;
-        padding: 5px 10px;
+        padding: 10px 15px;
         border-radius: 5px;
         align-items: center;
         display: flex;
         justify-content: space-between;
-        @media screen and (max-width: 991px) {
-          width: 75px;
-          padding: 5px;
-        }
       }
       &_arr {
         position: absolute;

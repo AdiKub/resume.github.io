@@ -14,6 +14,12 @@ const ExperienseDisplay = (props) => {
     return (
       <div className='experiense-display'>
         <div className='experiense-display-content'>
+        <p className='experiense-display__position' >
+          Period:
+              <span className='experiense-display__position__name'>
+              {position.period}
+            </span>
+          </p>
           <p className='experiense-display__position' >
             Position:
               <span className='experiense-display__position__name'>

@@ -44,7 +44,7 @@ const ExperienceNavigator = (props) => {
 				>
 				</button>
 				<div className='navigator-wrapper'>
-					<div id='first' className='navigator-radio'>
+					{/* <div id='first' className='navigator-radio'>
 						<div 
 							onClick={() => isSelect('future')}
 							className='navigator-radio__back'>
@@ -54,12 +54,12 @@ const ExperienceNavigator = (props) => {
 								<span className='navigator-radio__front__text'>{buttonId}</span>
 								<div className='navigator-radio__front__point'>	</div>
 							</div>}
-					</div>
-					{positions.map((position) => (
+					</div> */}
+					{positions.map((position, index) => (
 						<div
 							key={position}
 							className='navigator-wrapper navigator-wrapper_dinamic'>
-							<div className='navigator-radio__line'>	</div>
+						 	{index !== 0 && <div className='navigator-radio__line'>	</div>}
 							<div className='navigator-radio'>
 								<button
 									onClick={(e) => isSelect(e.target.id)}
@@ -68,9 +68,9 @@ const ExperienceNavigator = (props) => {
 								</button>
 								{buttonId === position &&
 									<div className='navigator-radio__front' >
-										<span className='navigator-radio__front__text'>
+										{/* <span className='navigator-radio__front__text'>
 											{experienseList[position].period}
-										</span>
+										</span> */}
 										<div className='navigator-radio__front__point'>	</div>
 									</div>}
 							</div>
