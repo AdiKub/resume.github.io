@@ -23,7 +23,5 @@ const Footer = () => {
 		</div>
 	)
 }
-//asdasdasdasdasdasd/as
-//asdderwersrewsertwertert
 
 export default Footer;
