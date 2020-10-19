@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/adiletkub.com/static/css/main.b6855266.chunk.css",
+    "main.css": "/adiletkub.com/static/css/main.85d2ed73.chunk.css",
     "main.js": "/adiletkub.com/static/js/main.7ad8d919.chunk.js",
     "main.js.map": "/adiletkub.com/static/js/main.7ad8d919.chunk.js.map",
     "runtime~main.js": "/adiletkub.com/static/js/runtime~main.e68947e8.js",
@@ -8,8 +8,8 @@
     "static/js/2.aa2755f2.chunk.js": "/adiletkub.com/static/js/2.aa2755f2.chunk.js",
     "static/js/2.aa2755f2.chunk.js.map": "/adiletkub.com/static/js/2.aa2755f2.chunk.js.map",
     "index.html": "/adiletkub.com/index.html",
-    "precache-manifest.bbc64398b7114bdf907a2aa72118e119.js": "/adiletkub.com/precache-manifest.bbc64398b7114bdf907a2aa72118e119.js",
+    "precache-manifest.94d7cececb7281a81eaf95ad671ff657.js": "/adiletkub.com/precache-manifest.94d7cececb7281a81eaf95ad671ff657.js",
     "service-worker.js": "/adiletkub.com/service-worker.js",
-    "static/css/main.b6855266.chunk.css.map": "/adiletkub.com/static/css/main.b6855266.chunk.css.map"
+    "static/css/main.85d2ed73.chunk.css.map": "/adiletkub.com/static/css/main.85d2ed73.chunk.css.map"
   }
 }
