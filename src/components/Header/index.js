@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 import './styles.scss'
+import downSVG from '../../assets/download_24px.svg'
 
 const Header = () => {
 	const generalInfoContents = useSelector(state => state.resume["generalInfo"])
@@ -24,11 +25,11 @@ const Header = () => {
 					</div>
 					<ul className='header-navs'>
 						<li className='header-navs_download_box'>
-							<div className='header-navs_download'>
-								<div className='header-navs_download_arr'>
-
-								</div>
-							</div>
+						<img 
+                alt='logo' 
+                className="header-navs_download" 
+                src={downSVG} 
+              />
 							<a
 								className='header-navs__link header-navs__link_resume' 
 								href={process.env.PUBLIC_URL + '/AdiletKub_CV_ENG.pdf'} download >

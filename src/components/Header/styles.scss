@@ -14,7 +14,7 @@
     width: 100%;
     justify-content: space-between;
     box-sizing: border-box;
-    height: 60px;
+    height: auto;
 
   }
   
@@ -37,7 +37,7 @@
       }
 
       @media screen and (max-width: 576px) {
-        margin-left: 20px;
+        margin: 10px;
       }
     }
 
@@ -57,19 +57,14 @@
 
   &-navs {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: auto;
+    
 
     &_download {
-      width: 10px;
-      height: 10px;
-      border-right: 2px solid black;
-      border-bottom: 2px solid black;
-      transform: rotate(45deg);
-      display: flex;
-      align-items: center;
-      position: relative;
+      height: 20px;
+      color: $gradiemtEnd;
+      
       &_box {
         width: 125px;
         border: 2px solid $gradiemtEnd;
@@ -80,30 +75,20 @@
         display: flex;
         justify-content: space-evenly;
       }
-      &_arr {
-        position: absolute;
-        transform: rotate(45deg);
-        width: 10px;
-        height: 2px;
-        left: -1px;
-        background: black;
-      }
+ 
     }
 
     @media screen and (max-width: 991px) {
-      width: 300px;
+      margin: 10px;
       font-size: 0.9em;
       flex-direction: column;
       align-items: flex-end;
-    }
-    
-    @media screen and (max-width: 767px) {
     }
 
     &__link {
       color: $gradiemtEnd;
       font-weight: bold;
-      font-size: 0.8em;
+      font-size: 0.9em;
 
       &:hover {
        cursor: pointer;

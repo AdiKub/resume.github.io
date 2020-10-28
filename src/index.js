@@ -10,9 +10,11 @@ import './assets/styles/main.scss'
 
 const reanderApp = () => (
   <Provider store={store}>
-    <Header />
-    <Details />
-    <Footer />
+    <div className='body-wrapper'>
+      <Header />
+      <Details />
+      <Footer />
+    </div>
   </Provider>
 );
 
