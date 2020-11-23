@@ -16,9 +16,6 @@ const INITIAL_STATE = {
         'LANGUAGES': [],
         'ADDITIONAL_EDUCATION': {},
         'CONTACTS': {
-          'email': "adiletkub@gmail.com",
-          'github': "github.com/AdiKub",
-          'phone_number': "+996 550 054450"
         }
       }
   }
