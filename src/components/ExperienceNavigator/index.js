@@ -25,7 +25,7 @@ const ExperienceNavigator = (props) => {
 	}
 	const setFullExperiense = ()=>{
 		isShow(!fullExperiense)
-		isSelect( !fullExperiense ? 'future' : 'FRONTEND-DEV')
+		isSelect( !fullExperiense ? 'future' : 'FRONTEND FREELANCE')
 	}
 	
 	useEffect(() => {
