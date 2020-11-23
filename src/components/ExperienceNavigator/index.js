@@ -9,7 +9,7 @@ const ExperienceNavigator = (props) => {
 		.sort((a, b)=> experienseList[b].id - experienseList[a].id)
 	const show = useSelector(state => state.show)
 	const [fullExperiense, isShow] = useState(false)
-	const [buttonId, isSelect] = useState('FRONTEND-DEV')
+	const [buttonId, isSelect] = useState('FRONTEND FREELANCE')
 	const dispatch = useDispatch()
 	const positions = !show ? sortExp : []
 
