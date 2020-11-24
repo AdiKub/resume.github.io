@@ -20,7 +20,7 @@ const Header = () => {
 							/>
 						</div> */}
 						<h1 className='header-title__text'>
-							{`${generalInfoContents.PERSON['first_name']} ${generalInfoContents.PERSON['last_name']}`}
+							{'ADILET KUBATBEK UULU'}
             </h1>
 					</div>
 					<ul className='header-navs'>
